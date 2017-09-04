@@ -146,7 +146,9 @@ def fastqc(newdir, fastqcdir, filename):
 datafile = "SraRunInfo.csv"
 basedir = "/mnt/scratch/ljcohen/mmetsp/"
 clusterfunc.check_dir(basedir)
-for datafile in datafiles:
-    url_data = get_data(datafile)
-    print url_data
-    execute(basedir, url_data)
+
+#for datafile in datafiles:
+#datafiles is not defined, may be at some point this was read from many files, so commenting out the loop 
+url_data = get_data(datafile)
+print url_data
+execute(basedir, url_data)
